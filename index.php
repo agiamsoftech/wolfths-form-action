@@ -497,7 +497,7 @@ date_default_timezone_set("Asia/Kolkata");
 
 												<div class="col-sm-4">
 													<label>Amount</label>
-													<input type="text" placeholder="1031" class="form-control" id="t_amount" name="t_amount">
+													<input type="text" placeholder="Amount" class="form-control" id="t_amount" name="t_amount">
 												</div>
 
 												<div class="col-sm-4 text-right">
@@ -601,9 +601,18 @@ function kidSubmitForm()
 $("#city").change(function(){
 
     var city = $('#city').val();
-    $('#show_city').text(city);
-    $('#mini_body').show();
-    $('#publish_btn').prop('disabled', false);
+    console.log(city);
+    if(city == 'Select City'){
+        $('#show_city').text('');
+        $('#t_amount').val('');
+        $('#mini_body').hide();
+        $('#publish_btn').prop('disabled', true);
+        
+    }else{
+        $('#show_city').text(city);
+        $('#mini_body').show();
+        $('#publish_btn').prop('disabled', false);
+    }
 
 });
 </script>
