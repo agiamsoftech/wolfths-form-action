@@ -502,7 +502,7 @@ date_default_timezone_set("Asia/Kolkata");
 
 												<div class="col-sm-4 text-right">
 													<label>Action</label><br>
-													<button type="button" class="btn bg-transparent text-pink-100 border-pink ml-1"><i class="icon-trash mr-2"></i> Delete</button>
+													<button type="button" class="btn bg-transparent text-pink-100 border-pink ml-1 amount_del_btn"><i class="icon-trash mr-2"></i> Delete</button>
 												</div>
 											</div>
 										</div>
@@ -613,6 +613,15 @@ $("#city").change(function(){
         $('#mini_body').show();
         $('#publish_btn').prop('disabled', false);
     }
+
+});
+
+$(".amount_del_btn").click(function(){
+
+    $('#show_city').text('');
+    $('#t_amount').val('');
+    $('#mini_body').hide();
+    $('#publish_btn').prop('disabled', true);
 
 });
 </script>
