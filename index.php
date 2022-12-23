@@ -60,7 +60,7 @@ date_default_timezone_set("Asia/Kolkata");
 		</div>
 
 		<div class="navbar-brand text-center text-lg-left">
-			<a href="index.html" class="d-inline-block">
+			<a href="index.php" class="d-inline-block">
 				<img src="https://iamsoftech.in/uploads/iamsoftechlogo.PNG" class="d-none d-sm-block" alt="Iamsoftech" style="height: 2.125rem;">
 				<img src="https://iamsoftech.in/uploads/iamsoftechlogo.PNG" class="d-sm-none" alt="">
 			</a>
