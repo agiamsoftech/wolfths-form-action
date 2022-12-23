@@ -601,7 +601,7 @@ function kidSubmitForm()
 $("#city").change(function(){
 
     var city = $('#city').val();
-    console.log(city);
+    
     if(city == 'Select City'){
         $('#show_city').text('');
         $('#t_amount').val('');
