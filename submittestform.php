@@ -11,7 +11,12 @@ $test_preparation= $_REQUEST['t_pre'];
 $cities= $_REQUEST['city'];
 $amount= $_REQUEST['t_amount'];	
 
-$insertData = array(
+$total = $dbFunc->partner->countRows("lab_tests", array("test_code"=> $test_code));
+
+if($total > 0){
+    echo 1;
+}else{
+    $insertData = array(
         "test_code" => $test_code,
         "lab_test" => $lab_test,
         "test_preparation" => $test_preparation,
@@ -21,5 +26,7 @@ $insertData = array(
     );
     // print_r($insertData);exit;        
     $sid= $dbFunc->partner->insert("lab_tests", $insertData);  
-    // print_r($sid);exit;        
+    // print_r($sid);exit;   
+}
+
 ?>

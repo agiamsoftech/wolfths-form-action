@@ -583,11 +583,15 @@ function kidSubmitForm()
                         
         success:function(data){
 
-            $('#msg').fadeIn(1000);
-            
-            setInterval(function(){ 
-                location.reload();
-            },2000);           
+            if(data == 1){
+                alert("The Test Code already exsits.");
+                return false;
+            }else{
+                $('#msg').fadeIn(1000);            
+                setInterval(function(){ 
+                    location.reload();
+                },2000);
+            }                      
             
         } 
 
